@@ -63,3 +63,6 @@ $paisOrigen = "new origen";
 $teatro->cargarFuncionesCines($nombreFuncion0,$precio0,$hora0,$duracion0,$genero,$paisOrigen);
 
 echo $teatro. "\n";
+echo "Cines,".$teatro->calcularCostoFunciones($colCines);
+echo "\nMusicales,".$teatro->calcularCostoFunciones($colMusicales);
+echo "\nObras,".$teatro->calcularCostoFunciones($colObras);
