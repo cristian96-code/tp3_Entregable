@@ -231,14 +231,13 @@ class Teatro{
     }
 
     public function calcularCostoFunciones($funciones){
-        $realizado = false;
         $total=0;
         for($i=0 ; $i<count($funciones) ; $i++){
+            
             $costo = $funciones[$i]->darCosto();
-            $total = $total+$costo;
-            $realizado = true;
+            $total= $total+$costo;
         }
-        return $total;
+        return "costo: ".$total."\n";
     }
 
     //Metodo __toString
@@ -249,15 +248,15 @@ class Teatro{
 
     "\nFUNCIONES: \n".
     "\nCINE:\n".$this->funcionesStringCine($this->getObjCine()).
-    "\nCosto : ".$this->calcularCostoFunciones($this->getObjCine()).
+    //"\nCosto : ".$this->calcularCostoFunciones($this->getObjCine()).
     "\n------------------------------\n".
 
     "\nMUSICAL:\n".$this->funcionesStringMusical($this->getObjMusical()).
-    "\nCosto : ".$this->calcularCostoFunciones($this->getObjMusical()).
+    //"\nCosto : ".$this->calcularCostoFunciones($this->getObjMusical()).
     "\n------------------------------\n".
 
     "\nOBRA:\n".$this->funcionesStringObra($this->getObjObra()).
-    "\nCosto : ".$this->calcularCostoFunciones($this->getObjObra()).
+    //"\nCosto : ".$this->calcularCostoFunciones($this->getObjObra()).
     "\n------------------------------\n";
     }
 }
